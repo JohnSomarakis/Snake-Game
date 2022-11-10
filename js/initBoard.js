@@ -16,8 +16,3 @@ function initBoard() {
         console.log("data");
     }
 }
-
-function changePosition(newPosition) {
-    console.error("position Changed");
-    document.getElementById("position" + newPosition).innerHTML = "<img  src='imagesRed/" + newPosition + ".png'  height=70 width=70 alt='imagesRed/" + newPosition + "'></div>";
-}

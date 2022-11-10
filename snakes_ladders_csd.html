@@ -5,61 +5,80 @@
     <link rel="stylesheet" href="css/myStyle.css">
     <script src="js/initBoard.js"></script>
     <script src="js/game.js"></script>
+    <script src="js/controller.js"></script>
+
 </head>
 <body onload=initBoard()>
 
-<div class="one">
+<div class="gametable_left">
     <table class="main_table" id="mainTable"></table>
 </div>
-<div class="two">
-    <table style="width:200px; height: 420px; margin:1px;border:1px solid black;">
-        <!--Player 1-->
-        <tr>
-            <td>White Player</td>
-        </tr>
-        <tr>
-            <td><img src="ImagesDice/whitePawn.png" alt="White_player"></td>
-        </tr>
-        <tr>
-            <td>Turn:</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Dice:</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Effect:</td>
-            <td></td>
-        </tr>
-        <!--Player 2-->
-        <tr>
-            <td>Red Player</td>
-        </tr>
-        <tr>
-            <td><img src="ImagesDice/redPawn.png" alt="White_player"></td>
-        </tr>
-        <tr>
-            <td>Turn:</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Dice:</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Effect:</td>
-            <td></td>
-        </tr>
-    </table>
-
-
-    <button type="button" class="button_Dice">
-        <img src="ImagesDice/dice.gif" alt="Dice" class="Dice_gif"/>
-    </button>
+<div class="gamepad_right">
+    <div class="infobox">
+        <table style="width:200px; height: 420px; margin:1px;border:1px solid black;">
+            <!--Player 1-->
+            <tr>
+                <td><img src="ImagesDice/whitePawn.png" alt="White_player"></td>
+                <td id="PlayerWhite_dice_img"><img src="ImagesDice/whitePawn.png" alt="White_player"></td>
+            </tr>
+            <tr>
+                <td>White Player</td>
+            </tr>
+            <tr>
+                <td>Turn:</td>
+                <td id="PlayerWhite_turn"></td>
+            </tr>
+            <tr>
+                <td>Dice:</td>
+                <td id="PlayerWhite_Dice"></td>
+            </tr>
+            <tr>
+                <td>Position:</td>
+                <td id="PlayerWhite_position"></td>
+            </tr>
+            <tr>
+                <td>Python<br>Effect:</td>
+                <td id="PlayerWhite_Effect"></td>
+            </tr>
+            <!--Player 2-->
+            <tr>
+                <td><img src="ImagesDice/redPawn.png" alt="White_player"></td>
+                <td id="PlayerRed_dice_img"><img src="ImagesDice/redPawn.png" alt="White_player"></td>
+            </tr>
+            <tr>
+                <td>Red Player</td>
+            </tr>
+            <tr>
+                <td>Turn:</td>
+                <td id="PlayerRed_Turn"></td>
+            </tr>
+            <tr>
+                <td>Dice:</td>
+                <td id="PlayerRed_dice"></td>
+            </tr>
+            <tr>
+                <td>Position:</td>
+                <td id="PlayerRed_position"></td>
+            </tr>
+            <tr>
+                <td>Python<br>Effect:</td>
+                <td id="PlayerRed_effect"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="buttons">
+        <div onclick="dicePressed();" class="button_Dice">
+            <button type="button">
+                <img src="ImagesDice/dice.gif" alt="Dice" class="Dice_gif"/>
+            </button>
+        </div>
+        <div>
+            <button onclick="initGame();" type="button" class="button_Dice">
+                Init New Game
+            </button>
+        </div>
+    </div>
 </div>
-
-
 </body>
 </html>
 

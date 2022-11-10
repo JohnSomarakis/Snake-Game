@@ -24,11 +24,6 @@ img {
     display: block;
 }
 
-.Dice_gif {
-    width: 55px;
-    height: 55px;
-}
-
 .button_Dice {
 
 }
@@ -36,14 +31,29 @@ img {
 div {
     text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
+
+
 }
 
-.one {
+.gametable_left {
     float: left;
 }
 
-.two {
+.gamepad_right {
+    display: block;
     float: left;
+}
+
+.infobox {
+    float: top;
+}
+
+.buttons {
+    width: 200px;
+    float: top;
+}
+
+.Dice_gif {
+    width: 120px;
+    height: 130px;
 }
